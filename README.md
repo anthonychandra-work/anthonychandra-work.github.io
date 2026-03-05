@@ -14,9 +14,9 @@ I think the bridge will contains 2 sets of informations requires to init the gam
                 width: 720,
                 height: 450,
                 slotLayout: [
-                [1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 1],
+                    [1, 1, 1, 1, 1],
+                    [1, 1, 1, 1, 1],
+                    [1, 1, 1, 1, 1],
                 ],
                 symbolSize: [140, 180],
                 symbolGap: [-10, -35],
@@ -133,16 +133,165 @@ I think the bridge will contains 2 sets of informations requires to init the gam
         ```
 
     + Loading configs
-        > this configs contain informations of the loading screen 
+        > this configs contain informations of the loading screen, including textures, hint.
+
+        ```ts
+        export const LoadingConfig = {
+            // Timing
+            HINT_ROTATION_INTERVAL: 3000,  // 3 seconds per hint
+            MIN_LOADING_DURATION: 2000,    // Minimum display time
+            PROGRESS_BAR_TWEEN_DURATION: 0.3,
+
+            // Loading tips array
+            TIPS: [
+                { text: "Collect 3 or more Scatter symbols to trigger Free Spins!" },
+                { text: "Wild symbols substitute for all regular symbols." },
+                { text: "Golden symbols transform into Wilds during wins!" },
+                { text: "Higher bets unlock bigger multiplier potential." },
+                { text: "Use Turbo mode for faster spins." },
+            ] as LoadingTip[],
+
+            // Progress bar dimensions (based on asset dimensions)
+            PROGRESS_BAR: {
+                width: 600,
+                height: 30,
+                glowOffset: 10,  // Glow extends beyond bar
+            },
+        };
+        ```
 
     + Default configs
+        > this configs contain information of default board.
+
+        ```ts
+        static readonly INIT_BOARD = [
+        [31, 14, 11, 1],
+        [15, 31, 3, 15, 4],
+        [31, 14, 1, 14, 11],
+        [12, 12, 15, 3, 11],
+        [4, 12, 3, 4]
+        ];
+        ```
+
     * Buy Feature popup configs
+        > this configs contain information of the buy feature popups, including position of title, button position, etc.
+
     * Bet Options popup configs
+        > this configs contain informations of the bet options popup, including position of title, button position, etc.
+
     * Spin options popup configs
-    + Game info popup configs
-    + History popup configs
-    + Big win popup configs
-    + Total freespins popup configs
-    + Total win popup configs
+        > this configs contain informations of the spin options popup, including position of title, button position, etc.
+
+    * Game info popup configs
+        > this configs contain informations of the game info popup, including position of title, button position, etc.
+
+    * History popup configs
+        > this configs contain informations of the history popup, including position of title, button position, etc.
+
+    * Big win popup configs
+        > this configs contain informations of big win popup, including animation duration, upgrade animation every n * bet, etc.
+
+    * Total freespins popup configs
+        > this configs contain informations of total freespins popup, including animation duration, etc.
+
+    * Total win popup configs
+        > this configs contain informations of total win popup, including animation duration, etc.
+
 + Components
+    * LoadScreen
+        
+        ```ts
+        {
+            background: 'file-name.format',
+            bar: ''
+            bar-bg: '',
+            bar-mask: ''
+        }
+        ```
+    
+    * Buttons
+        
+        ```ts
+        {
+            bet-opt-btn: 'file-name.format',
+            history-btn:
+            info-btn: 
+            menu-btn:
+            menu-close-btn:
+            sound-btn-off:
+            sound-btn-on:
+            spin-opt-btn:
+            buy-feature-btn:
+        }
+        ```
+    
+    * Bet Options Popup
+
+        ```ts
+        {
+            
+        }
+        ```
+
+    * Spin Options Popup
+
+    * History Popup
+        > History popup covers 4 components: 
+
+
+    * Big Win Popup
+        > Big win popup will need information of big win skeleton.
+
+        ```ts
+        {
+            bigwin-skel:
+            bigwin-atlas:
+            bigwin-png:
+            animations: [] // I think this one should be fixed / standardized..
+        }
+        
+        ```
+    
+    * Total Win Popup
+
+        ```ts
+        {
+            skel:
+            atlas:
+            png:
+            animations: [] 
+        }
+        
+        ```
+
+    * Total Free Spins Popup
+
+    ```ts
+        {
+            skel:
+            atlas:
+            png:
+            animations: [] 
+        }
+        
+    ```
+
+    * Bottom Game UI
+
+    * Reward Information
+
+    ```ts
+    {
+        skel: 
+        atlas:
+        png:
+        hint: []
+    }
+    ```
+
+    * MainScreen
+
+    * Sound / Feature?
+
+
 

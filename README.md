@@ -229,11 +229,44 @@ I think the bridge will contains 2 sets of informations requires to init the gam
 
         ```ts
         {
+            title
+            bg
+            closeBtn
+            confirmButton
+        }
+        ```
+
+    * Balance UI
+
+        ```ts
+        {
             
         }
         ```
 
+    * Quick Option
+
+        ```ts
+        {
+            
+        }
+        ```
+
+    * Bet Slider
+
+        ```ts
+        {
+            
+        }
+        ```
+    
     * Spin Options Popup
+
+        ```ts
+        {
+            
+        }
+        ```
 
     * History Popup
         > History popup covers 4 components: 
@@ -266,30 +299,41 @@ I think the bridge will contains 2 sets of informations requires to init the gam
 
     * Total Free Spins Popup
 
-    ```ts
-        {
-            skel:
-            atlas:
-            png:
-            animations: [] 
-        }
-        
-    ```
+        ```ts
+            {
+                skel:
+                atlas:
+                png:
+                animations: [] 
+            }
+            
+        ```
 
-    * Bottom Game UI
+    * Win UI
+
+        ```ts
+        {
+            
+        }
+        ```
 
     * Reward Information
 
-    ```ts
-    {
-        skel: 
-        atlas:
-        png:
-        hint: []
-    }
-    ```
+        ```ts
+        {
+            skel: 
+            atlas:
+            png:
+            hint: []
+        }
+        ```
+    * Background Manager
 
-    * MainScreen
+        ```ts
+        {
+            
+        }
+        ```
 
     * Sound / Feature?
 
